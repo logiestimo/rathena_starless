@@ -1,0 +1,16 @@
+prontera,149,184,5	script	Helper	811,{
+
+mes "If you want to run the server and everyone connect to it";
+
+mes "In order for others to join you, you need to rent a server.";
+mes "If you are a beginner, the easiest thing to do is to rent a VPS on Windows 10 Server.";
+mes "To do this, click on the link and buy a server.";
+mes "You will receive bonus money ($50) if you register below.";
+mes "<URL>Buy VPS (50$ bonus)<INFO>https://www.vultr.com/?ref=7859187-4F</INFO></URL>";
+next;
+mes "Short guide how to do it here: ";
+mes "<URL>Read easy Complete Guide! (15 steps only)<INFO>https://gist.github.com/anacondaqq/3eae8e4afb5d3c3880d08b95b2c54b78</INFO></URL>";
+mes "Is not it easy?";
+close;
+
+}
