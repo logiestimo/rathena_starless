@@ -1,38 +1,38 @@
 // MySQL Login server
-login_server_ip: 127.0.0.1
+login_server_ip: 51.79.157.53
 login_server_port: 3306
-login_server_id: rathena_user_db
-login_server_pw: changemeplease
-login_server_db: rathena_PRERE_db
+login_server_id: cloudro
+login_server_pw: ayanami222
+login_server_db: clouddb
 login_codepage:
 login_case_sensitive: no
 
-ipban_db_ip: 127.0.0.1
+ipban_db_ip: 51.79.157.53
 ipban_db_port: 3306
-ipban_db_id: rathena_user_db
-ipban_db_pw: changemeplease
-ipban_db_db: rathena_PRERE_db
+ipban_db_id: cloudro
+ipban_db_pw: ayanami222
+ipban_db_db: clouddb
 ipban_codepage:
 
 // MySQL Character server
-char_server_ip: 127.0.0.1
+char_server_ip: 51.79.157.53
 char_server_port: 3306
-char_server_id: rathena_user_db
-char_server_pw: changemeplease
-char_server_db: rathena_PRERE_db
+char_server_id: cloudro
+char_server_pw: ayanami222
+char_server_db: clouddb
 
 // MySQL Map Server
-map_server_ip: 127.0.0.1
+map_server_ip: 51.79.157.53
 map_server_port: 3306
-map_server_id: rathena_user_db
-map_server_pw: changemeplease
-map_server_db: rathena_PRERE_db
+map_server_id: cloudro
+map_server_pw: ayanami222
+map_server_db: clouddb
 
 // MySQL Log Database
-log_db_ip: 127.0.0.1
+log_db_ip: 51.79.157.53
 log_db_port: 3306
-log_db_id: rathena_user_log
-log_db_pw: changemepleasetoo
-log_db_db: rathena_PRERE_log
+log_db_id: cloudro
+log_db_pw: ayanami222
+log_db_db: logs
 log_codepage:
 log_login_db: loginlog
