@@ -13,7 +13,7 @@
 #include "timer.hpp" // t_tick
 
 #ifndef PACKETVER
-	#error Please define PACKETVER in src/config/packets.hpp
+	#PACKETVER 20151029
 #endif
 
 ///Remove/Comment this line to disable sc_data saving. [Skotlex]
