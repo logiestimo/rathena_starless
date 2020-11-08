@@ -676,7 +676,7 @@ function	script	QWS_MMarray	{
 //	setarray @pTprice[@Ti], $QW_BW_PRICE;	// Warp prices: Basic ($QW_BW_PRICE), Advanced ($QW_AW_PRICE), Overseas ($QW_OW_PRICE)
 //
 //	setarray @pTmap$[@Ti], "prontera";	// Map name
-//	setarray @pTXcoords[@Ti], 151;		// X warp coords
+//	setarray @pTXcoords[@Ti], 153;		// X warp coords
 //	setarray @pTYcoords[@Ti], 187;		// Y warp coords
 //
 //	QWS_Make_Town_Menu 0;	// Use a free number (last used is 30, Eclage)
@@ -1648,7 +1648,7 @@ louyang,211,106,4	script	Warpra#28	113,{ callfunc "QWS_Town_Warpra",14,"Luoyang 
 morocc,157,95,4	script	Warpra#29	113,{ callfunc "QWS_Town_Warpra",16,"Morocc Town"; close; }
 nif_fild01,319,77,1	script	Warpra#30	113,{ callfunc "QWS_Town_Warpra",17,"Niflheim Town"; close; }
 payon,183,110,4	script	Warpra#31	113,{ callfunc "QWS_Town_Warpra",18,"Payon Town"; close; }
-prontera,147,172,5	script	Warpra#32	113,{ callfunc "QWS_Town_Warpra",0,"Prontera Town"; close; }
+prontera,153,187,5	script	Warpra#32	113,{ callfunc "QWS_Town_Warpra",0,"Prontera Town"; close; }
 umbala,133,130,4	script	Warpra#33	113,{ callfunc "QWS_Town_Warpra",19,"Umbala Town"; close; }
 xmas,151,136,4	script	Warpra#34	113,{ callfunc "QWS_Town_Warpra",15,"Lutie Town"; close; }
 yuno,138,162,4	script	Warpra#35	113,{ callfunc "QWS_Town_Warpra",20,"Juno Town"; close; }
