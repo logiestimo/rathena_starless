@@ -2,10 +2,10 @@ prontera,150,190,4	script	Reset Girl	124,{
 	disable_items;
 	disable_command;
 
-	default:// others class
-		.@cost = 5000;
-		if (BaseLevel > 79)
-			.@cost += 10000;
+	mes "[Reset Girl]";
+		.@cost = 100000;
+		if (BaseLevel > 89)
+			.@cost += 5000;
 		mes "Reset Stats: " + .@cost + "z";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
