@@ -1571,7 +1571,13 @@ binget:
 }
 
 //==========================Town=Warpras===========================
-
+menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
+    	" ~ Towns",Towns,
+	if (lastwarp$ == "")
+		message strcharinfo(0),"You haven't warped anywhere yet.";
+	else
+		warp lastwarp$,lastwarpx,lastwarpy;
+	end;
 function Go {
 	set lastwarp$, getarg(0);
 	set lastwarpx, getarg(1,0);
