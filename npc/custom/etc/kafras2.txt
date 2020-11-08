@@ -1,4 +1,4 @@
-prontera,160,190,4	script	Kafra Service	124,{
+prontera,160,190,4	script	Kafra Service	640,{
 	cutin "kafra_05",2;
 	mes "[Kafra Niana]";
 	mes "Hm...?";
@@ -11,7 +11,7 @@ prontera,160,190,4	script	Kafra Service	124,{
 		mes "been saved here";
 		mes "Thank you.";
 		next;
-		savepoint "Prontera",160,182;
+		savepoint "Prontera",160,182,1,1;
 		mes "[Kafra Niana]";
 		mes "Please make use of";
 		mes "the Kafra Services that are";
