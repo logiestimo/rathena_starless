@@ -11,7 +11,7 @@ prontera,160,190,4	script	Kafra Service	640,{
 		mes "been saved here";
 		mes "Thank you.";
 		next;
-		savepoint "Prontera",160,182,1,1;
+		savepoint "prontera",160,182,1,1;
 		mes "[Kafra Niana]";
 		mes "Please make use of";
 		mes "the Kafra Services that are";
