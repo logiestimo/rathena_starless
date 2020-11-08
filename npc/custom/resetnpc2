@@ -1,0 +1,15 @@
+if (BaseLevel == 999 && JobLevel == 150) {
+mes "It costs 10,000,000z to reset your level.";
+if (Zeny < 10000000) close;
+next;
+if(select("Do it.:No, thanks.") == 2) close;
+set Zeny, Zeny - 10000000;
+
+// This will reset BaseLevel/JobLevel, as well as skill points.
+resetlvl(2);
+
+mes "All done!";
+close;
+}
+mes "Your level is too low.";
+close;
