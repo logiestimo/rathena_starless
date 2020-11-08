@@ -1,4 +1,4 @@
-prontera,161,190,4	script	Kafra Service	124,{
+prontera,160,190,4	script	Kafra Service	124,{
 	cutin "kafra_05",2;
 	mes "[Kafra Niana]";
 	mes "Hm...?";
@@ -8,10 +8,10 @@ prontera,161,190,4	script	Kafra Service	124,{
 	case 1:
 		mes "[Kafra Niana]";
 		mes "Your Respawn Point has";
-		mes "been saved here,;
+		mes "been saved here";
 		mes "Thank you.";
 		next;
-		savepoint "prontera",160,182,1,1;
+		savepoint "Prontera",160,182;
 		mes "[Kafra Niana]";
 		mes "Please make use of";
 		mes "the Kafra Services that are";
@@ -31,7 +31,7 @@ prontera,161,190,4	script	Kafra Service	124,{
 		next;
 		set Zeny, Zeny-20;
 		set RESRVPTS, RESRVPTS + (20/5);
-		mes "[Kafra Niana]";
+		mes "[Kafra n]";
 		mes "In the future, please";
 		mes "ask the Kafra Employee on";
 		mes "duty if you wish to use";
@@ -42,7 +42,7 @@ prontera,161,190,4	script	Kafra Service	124,{
 		openstorage;
 		break;
 	case 3:
-		mes "[Kafra Niana]";
+		mes "[Kafra Leilah]";
 		mes "^666666*Whew...*^000000";
 		mes "Great, because I'm";
 		mes "actually on my break";
