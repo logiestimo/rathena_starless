@@ -676,7 +676,7 @@ function	script	QWS_MMarray	{
 //	setarray @pTprice[@Ti], $QW_BW_PRICE;	// Warp prices: Basic ($QW_BW_PRICE), Advanced ($QW_AW_PRICE), Overseas ($QW_OW_PRICE)
 //
 //	setarray @pTmap$[@Ti], "prontera";	// Map name
-//	setarray @pTXcoords[@Ti], 156;		// X warp coords
+//	setarray @pTXcoords[@Ti], 151;		// X warp coords
 //	setarray @pTYcoords[@Ti], 187;		// Y warp coords
 //
 //	QWS_Make_Town_Menu 0;	// Use a free number (last used is 30, Eclage)
