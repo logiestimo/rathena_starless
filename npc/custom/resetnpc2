@@ -1,15 +1,136 @@
-if (BaseLevel == 999 && JobLevel == 150) {
-mes "It costs 10,000,000z to reset your level.";
-if (Zeny < 10000000) close;
-next;
-if(select("Do it.:No, thanks.") == 2) close;
-set Zeny, Zeny - 10000000;
+prontera,150,190,4	script	Reset Girl	124,{
+	disable_items;
+	disable_command;
 
-// This will reset BaseLevel/JobLevel, as well as skill points.
-resetlvl(2);
+	mes "[Reset Girl]";
+	switch( Class ) {
+	case JOB_NOVICE:// normal class
+	case JOB_SWORDMAN:
+	case JOB_MAGE:
+	case JOB_ARCHER:
+	case JOB_ACOLYTE:
+	case JOB_MERCHANT:
+	case JOB_THIEF:
+	case JOB_KNIGHT:
+	case JOB_PRIEST:
+	case JOB_WIZARD:
+	case JOB_BLACKSMITH:
+	case JOB_HUNTER:
+	case JOB_ASSASSIN:
+	case JOB_KNIGHT2:
+	case JOB_CRUSADER:
+	case JOB_MONK:
+	case JOB_SAGE:
+	case JOB_ROGUE:
+	case JOB_ALCHEMIST:
+	case JOB_BARD:
+	case JOB_DANCER:
+	case JOB_CRUSADER2:
+	case JOB_SUPER_NOVICE:
+	case JOB_GUNSLINGER:
+	case JOB_NINJA:
 
-mes "All done!";
-close;
+	case JOB_BABY:// baby class
+	case JOB_BABY_SWORDMAN:
+	case JOB_BABY_MAGE:
+	case JOB_BABY_ARCHER:
+	case JOB_BABY_ACOLYTE:
+	case JOB_BABY_MERCHANT:
+	case JOB_BABY_THIEF:
+	case JOB_BABY_KNIGHT:
+	case JOB_BABY_PRIEST:
+	case JOB_BABY_WIZARD:
+	case JOB_BABY_BLACKSMITH:
+	case JOB_BABY_HUNTER:
+	case JOB_BABY_ASSASSIN:
+	case JOB_BABY_KNIGHT2:
+	case JOB_BABY_CRUSADER:
+	case JOB_BABY_MONK:
+	case JOB_BABY_SAGE:
+	case JOB_BABY_ROGUE:
+	case JOB_BABY_ALCHEMIST:
+	case JOB_BABY_BARD:
+	case JOB_BABY_DANCER:
+	case JOB_BABY_CRUSADER2:
+	case JOB_SUPER_BABY:
+
+	case JOB_TAEKWON:
+	case JOB_STAR_GLADIATOR:
+	case JOB_STAR_GLADIATOR2:
+	case JOB_SOUL_LINKER:
+		if (BaseLevel < 50)
+			.@cost = 2000;
+		else if (BaseLevel < 90)
+			.@cost = 120000;
+		else
+			.@cost = 300000;
+		mes "Reset Stats: " + .@cost + "z.";
+		mes "Reset Skills: " + .@cost + "z.";
+		mes "Please select the service you want:";
+		next;
+		.@s = select( "Reset Skills", "Reset Stats" );
+		mes "[Reset Girl]";
+		if (Zeny < .@cost) {
+			mes "Sorry, you don't have enough Zeny.";
+			close;
+		}
+		Zeny -= .@cost;
+		if (.@s == 2)
+			resetstatus;
+		else {
+			sc_end_class;
+			resetskill;
+		}
+		mes "There you go!";
+		close;
+
+	default:// others class
+		.@cost = 1000000;
+		if (BaseLevel > 89)
+			.@cost += 500000;
+		mes "Reset Stats: " + .@cost + "z + 1 Monster Card.";
+		mes "Reset Skills: " + .@cost + "z + 1 Monster Card.";
+		mes "Please select the service you want:";
+		next;
+		.@s = select( "Reset Skills", "Reset Stats" );
+		mes "[Reset Girl]";
+		if (Zeny < .@cost) {
+			mes "Sorry, you don't have enough Zeny.";
+			close;
+		}
+		getinventorylist;
+		for ( .@i = 0; .@i < @inventorylist_count; .@i++ ) {
+			if (getiteminfo(@inventorylist_id[.@i],2) != 6)
+				continue;
+			.@card_id[.@card_size] = @inventorylist_id[.@i];
+			.@card_name$[.@card_size] = getitemname( @inventorylist_id[.@i] );
+			.@card_size++;
+		}
+		if (.@card_size < 1) {
+			mes "Sorry, you don't have enough Card.";
+			close;
+		}
+		mes "Which card do you want to use?";
+		next;
+		.@index = select( implode(.@card_name$,":") ) - 1;
+		mes "[Reset Girl]";
+		if (Zeny < .@cost) {
+			mes "It shouldn't happen.";
+			close;
+		}
+		if (countitem(.@card_id[.@index]) < 1) {
+			mes "It shouldn't happen.";
+			close;
+		}
+		Zeny -= .@cost;
+		delitem .@card_id[.@index],1;
+		if (.@s == 2)
+			resetstatus;
+		else {
+			sc_end_class;
+			resetskill;
+		}
+		mes "There you go!";
+		close;
+	}
 }
-mes "Your level is too low.";
-close;
