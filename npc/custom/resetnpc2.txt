@@ -1,4 +1,4 @@
-prontera,150,190,4	script	Reset Girl	3528,{
+prontera,150,190,4	script	Reset Girl	124,{
 	disable_items;
 	disable_command;
 
