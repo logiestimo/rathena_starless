@@ -29,6 +29,14 @@ prontera,150,190,4	script	Reset Girl	124,{
 	case JOB_SUPER_NOVICE:
 	case JOB_GUNSLINGER:
 	case JOB_NINJA:
+	case JOB_NOVICE_HIGH:
+	case JOB_SWORDMAN_HIGH:
+	case JOB_MAGE_HIGH:
+	case JOB_ARCHER_HIGH:
+	case JOB_ACOLYTE_HIGH:
+	case JOB_MERCHAT_HIGH:
+	case JOB_THIEF_HIGH:
+
 
 	case JOB_BABY:// baby class
 	case JOB_BABY_SWORDMAN:
@@ -60,10 +68,10 @@ prontera,150,190,4	script	Reset Girl	124,{
 	case JOB_SOUL_LINKER:
 		if (BaseLevel < 50)
 			.@cost = 2000;
-		else if (BaseLevel < 90)
-			.@cost = 75000;
+		else if (BaseLevel > 70)
+			.@cost += 8000;
 		else
-			.@cost = 750000;
+			.@cost = 75000;
 		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
@@ -85,9 +93,9 @@ prontera,150,190,4	script	Reset Girl	124,{
 		close;
 
 	default:// others class
-		.@cost = 100000;
+		.@cost = 50000;
 		if (BaseLevel > 95)
-			.@cost += 5000;
+			.@cost += 10000;
 		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";

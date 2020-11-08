@@ -1572,47 +1572,122 @@ binget:
 
 //==========================Town=Warpras===========================
 
-function	script	QWS_Town_Warpra	{
-	function QWS_T_getbin;
-	function QWS_T_setbin;
-	
-	if ((QWS_T_getbin(getarg(0)) == 0) && (getarg(1) != "")) {
-		mes "[Warpra]";
-		mes getarg(1)+" unlocked!";
-		QWS_T_setbin(getarg(0));
-		return;
-	} else if (QWS_T_getbin(getarg(0)) == 1) {
-		callfunc "Q_Warpra",0;
-	} else
-		debugmes "QWS_Town_Warpra error, improper syntax ?";
-	return;
-
-function	QWS_T_setbin	{
-	set @tempsetbindata,1;
-	if (getarg(0) == 0) goto binset;
-	set @temploopsetbin,0;
-	do {
-		set @tempsetbindata, @tempsetbindata * 2;
-		set @temploopsetbin, @temploopsetbin + 1;
-	} while (getarg(0) > @temploopsetbin);
-binset:
-	set ##QWS_T_Unlock,(##QWS_T_Unlock | @tempsetbindata);
+function Go {
+	set lastwarp$, getarg(0);
+	set lastwarpx, getarg(1,0);
+	set lastwarpy, getarg(2,0);
+	warp getarg(0),getarg(1,0),getarg(2,0);
+	end;
+}
+function Disp {
+	if (getargcount() < 3)
+		set @menu$, getarg(0);
+	else {
+		set @menu$,"";
+		for (set .@i,getarg(1); .@i<=getarg(2); set .@i,.@i+1)
+			set @menu$, @menu$+getarg(0)+" "+.@i+":";
+	}
 	return;
 }
+function Pick {
+	set .@warp_block,@warp_block;
+	set @warp_block,0;
+	if((@f && .OnlyFirstFld) || (@d && .OnlyFirstDun)){
+		set .@select,1;
+		if(.@warp_block){
+			while(.@warp_block & (1<<.@select)){
+				.@select += 1;
+			}
+		}
+	}else{
+		set .@select, select(@menu$);
+	}
+	if (getarg(0) == "") {
+		set .@i, .@select;
+		set .@map$, getarg(.@i);
+	} else {
+		set .@i, .@select-getarg(1,0);
+		set .@map$, getarg(0)+((.@i<10)?"0":"")+.@i;
+	}
+	if (.@warp_block & (1<<.@select)) {
+		message strcharinfo(0),"This map is not enabled in "+((checkre(0))?"":"Pre-")+"Renewal.";
+		end;
+	}
+	set .@x, @c[.@i*2];
+	set .@y, @c[.@i*2+1];
+	deletearray @c[0],getarraysize(@c);
+	@f = false; @d = false;
+	Go(.@map$,.@x,.@y);
+}
+function Restrict {
+	if ((getarg(0) == "RE" && !checkre(0)) || (getarg(0) == "Pre-RE" && checkre(0))) {
+		if (getarg(1,0)) {
+			set @warp_block,0;
+			for (set .@i,1; .@i<getargcount(); set .@i,.@i+1)
+				set @warp_block, @warp_block | (1<<getarg(.@i));
+		} else {
+			message strcharinfo(0),"This map is not enabled in "+((checkre(0))?"":"Pre-")+"Renewal.";
+			end;
+		}
+	}
+	return;
+}
 
-function	QWS_T_getbin	{
-	set @tempgetbindata,1;
-	if (getarg(0) == 0) goto binget;
-	set @temploopgetbin,0;
-	do {
-		set @tempgetbindata, @tempgetbindata * 2;
-		set @temploopgetbin, @temploopgetbin + 1;
-	} while (getarg(0) > @temploopgetbin);
-binget:
-	if ((@tempgetbindata & ##QWS_T_Unlock) == @tempgetbindata) return 1;
-	return 0;
-}
-}
+// --------------------------------------------------
+	Towns:
+// --------------------------------------------------
+menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
+ 		"Comodo",T7, "Dewata",T8, "Eclage",T9, "Einbech",T10, "Einbroch",T11,
+ 		"Geffen",T13, "Kunlun",T14, "Hugel",T15,
+    	"Izlude",T16, "Jawaii",T17, "Lighthalzen",T19, "Luoyang",T20,
+		"Lutie",T21, "Malangdo",T22, "Morocc",T27, 
+		"Niflheim",T30, "Payon",T31, "Rachel",T32,
+
+T1: Go("prontera",155,183);
+T2: Go("alberta",28,234);
+T3: Go("aldebaran",140,131);
+T4: Go("amatsu",198,84);
+T5: Go("ayothaya",208,166);
+T6: Restrict("RE");
+	Go("brasilis",196,217);
+T7: Go("comodo",209,143);
+T8: Restrict("RE");
+	Go("dewata",200,180);
+T9: Restrict("RE");
+	Go("ecl_in01",48,53);
+T10: Go("einbech",63,35);
+T11: Go("einbroch",64,200);
+T12: Restrict("RE");
+	 Go("dicastes01",198,187);
+T13: Go("geffen",119,59);
+T14: Go("gonryun",160,120);
+T15: Go("hugel",96,145);
+T16: Go("izlude",128,(checkre(3)?146:114));
+T17: Go("jawaii",251,132);
+T18: Restrict("RE");
+	 Go("lasagna",193,182);
+T19: Go("lighthalzen",158,92);
+T20: Go("louyang",217,100);
+T21: Go("xmas",147,134);
+T22: Restrict("RE");
+	 Go("malangdo",140,114);
+T23: Restrict("RE");
+	 Go("malaya",231,200);
+T24: Go("manuk",282,138);
+T25: Go("mid_camp",210,288);
+T26: Restrict("RE");
+	 Go("mora",55,146);
+T27: Go("morocc",156,93);
+T28: Go("moscovia",223,184);
+T29: Go("nameless_n",256,215);
+T30: Go("niflheim",202,174);
+T31: Go("payon",179,100);
+T32: Go("rachel",130,110);
+T33: Go("splendide",201,147);
+T34: Go("thor_camp",246,68);
+T35: Go("umbala",97,153);
+T36: Go("veins",216,123);
+T37: Go("yuno",157,51);
 //============================Warpras==============================
 
 -	script	Warpra#0	-1,{ callfunc "Q_Warpra",1; }
