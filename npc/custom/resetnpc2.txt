@@ -1,4 +1,4 @@
-prontera,150,190,4	script	Reset Girl	124,{
+prontera,150,190,4	script	Reset Girl	3528,{
 	disable_items;
 	disable_command;
 
@@ -61,9 +61,33 @@ prontera,150,190,4	script	Reset Girl	124,{
 		if (BaseLevel < 50)
 			.@cost = 2000;
 		else if (BaseLevel < 90)
-			.@cost = 120000;
+			.@cost = 75000;
 		else
-			.@cost = 100000;
+			.@cost = 750000;
+		mes "Reset Stats: " + .@cost + "z.";
+		mes "Reset Skills: " + .@cost + "z.";
+		mes "Please select the service you want:";
+		next;
+		.@s = select( "Reset Skills", "Reset Stats" );
+		mes "[Reset Girl]";
+		if (Zeny < .@cost) {
+			mes "Sorry, you don't have enough Zeny.";
+			close;
+		}
+		Zeny -= .@cost;
+		if (.@s == 2)
+			resetstatus;
+		else {
+			sc_end_class;
+			resetskill;
+		}
+		mes "There you go!";
+		close;
+
+	default:// others class
+		.@cost = 100000;
+		if (BaseLevel > 95)
+			.@cost += 5000;
 		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
