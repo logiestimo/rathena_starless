@@ -83,25 +83,5 @@ prontera,150,190,4	script	Reset Girl	124,{
 		}
 		mes "There you go!";
 		close;
-
-	default:// others class
-		.@cost = 10000;
-		if (BaseLevel > 79)
-			.@cost += 5000;
-		mes "Reset Stats: " + .@cost + "z.";
-		mes "Reset Skills: " + .@cost + "z.";
-		mes "Please select the service you want:";
-		next;
-		.@s = select( "Reset Skills", "Reset Stats" );
-		mes "[Reset Girl]";
-		if (Zeny < .@cost) {
-			mes "Sorry, you don't have enough Zeny.";
-			close;
-		else {
-			sc_end_class;
-			resetskill;
-		}
-		mes "There you go!";
-		close;
 	}
 }
