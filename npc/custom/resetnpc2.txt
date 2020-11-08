@@ -3,10 +3,68 @@ prontera,150,190,4	script	Reset Girl	124,{
 	disable_command;
 
 	mes "[Reset Girl]";
-		.@cost = 100000;
-		if (BaseLevel > 89)
-			.@cost += 5000;
-		mes "Reset Stats: " + .@cost + "z";
+	switch( Class ) {
+	case JOB_NOVICE:// normal class
+	case JOB_SWORDMAN:
+	case JOB_MAGE:
+	case JOB_ARCHER:
+	case JOB_ACOLYTE:
+	case JOB_MERCHANT:
+	case JOB_THIEF:
+	case JOB_KNIGHT:
+	case JOB_PRIEST:
+	case JOB_WIZARD:
+	case JOB_BLACKSMITH:
+	case JOB_HUNTER:
+	case JOB_ASSASSIN:
+	case JOB_KNIGHT2:
+	case JOB_CRUSADER:
+	case JOB_MONK:
+	case JOB_SAGE:
+	case JOB_ROGUE:
+	case JOB_ALCHEMIST:
+	case JOB_BARD:
+	case JOB_DANCER:
+	case JOB_CRUSADER2:
+	case JOB_SUPER_NOVICE:
+	case JOB_GUNSLINGER:
+	case JOB_NINJA:
+
+	case JOB_BABY:// baby class
+	case JOB_BABY_SWORDMAN:
+	case JOB_BABY_MAGE:
+	case JOB_BABY_ARCHER:
+	case JOB_BABY_ACOLYTE:
+	case JOB_BABY_MERCHANT:
+	case JOB_BABY_THIEF:
+	case JOB_BABY_KNIGHT:
+	case JOB_BABY_PRIEST:
+	case JOB_BABY_WIZARD:
+	case JOB_BABY_BLACKSMITH:
+	case JOB_BABY_HUNTER:
+	case JOB_BABY_ASSASSIN:
+	case JOB_BABY_KNIGHT2:
+	case JOB_BABY_CRUSADER:
+	case JOB_BABY_MONK:
+	case JOB_BABY_SAGE:
+	case JOB_BABY_ROGUE:
+	case JOB_BABY_ALCHEMIST:
+	case JOB_BABY_BARD:
+	case JOB_BABY_DANCER:
+	case JOB_BABY_CRUSADER2:
+	case JOB_SUPER_BABY:
+
+	case JOB_TAEKWON:
+	case JOB_STAR_GLADIATOR:
+	case JOB_STAR_GLADIATOR2:
+	case JOB_SOUL_LINKER:
+		if (BaseLevel < 50)
+			.@cost = 2000;
+		else if (BaseLevel < 90)
+			.@cost = 120000;
+		else
+			.@cost = 300000;
+		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
 		next;
@@ -17,7 +75,6 @@ prontera,150,190,4	script	Reset Girl	124,{
 			close;
 		}
 		Zeny -= .@cost;
-		delitem .@card_id[.@index],1;
 		if (.@s == 2)
 			resetstatus;
 		else {
