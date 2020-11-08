@@ -1,0 +1,58 @@
+prontera,150,133,4	script	Kafra Service	113,{
+	cutin "kafra_05",2;
+	mes "[Kafra Niana]";
+	mes "Hm...?";
+	mes "need something?";
+	next;
+	switch(select("Save:Use Storage:Cancel")) {
+	case 1:
+		mes "[Kafra Niana]";
+		mes "Your Respawn Point has";
+		mes "been saved here, inside";
+		mes "of the Kafra Corporation";
+		mes "Headquarters. Thank you.";
+		next;
+		savepoint "Prontera",160,182,1,1;
+		mes "[Kafra Niana]";
+		mes "Please make use of";
+		mes "the Kafra Services that are";
+		mes "available throughout all of";
+		mes "Midgard. Thank you";
+		close2;
+		break;
+	case 2:
+		if (Zeny < 20) {
+			mes "[Kafra Niana]";
+			mes "Excuse me, but it";
+			mes "seems that you don't";
+			mes "have the 20 zeny to pay";
+			mes "the Storage access fee...";
+			close;
+		}
+		next;
+		set Zeny, Zeny-20;
+		set RESRVPTS, RESRVPTS + (20/5);
+		mes "[Kafra Niana]";
+		mes "In the future, please";
+		mes "ask the Kafra Employee on";
+		mes "duty if you wish to use";
+		mes "any of the Kafra Services.";
+		mes "Thank you for your patronage.";
+		callfunc("F_CheckKafCode");    //check your storage password, if set
+		close2;
+		openstorage;
+		break;
+	case 3:
+		mes "[Kafra Niana]";
+		mes "^666666*Whew...*^000000";
+		mes "Great, because I'm";
+		mes "actually on my break";
+		mes "right now. Choosing";
+		mes "''Cancel'' was a good";
+		mes "move on your part.";
+		close2;
+		break;
+	}
+	cutin "",255;
+	end;
+}
