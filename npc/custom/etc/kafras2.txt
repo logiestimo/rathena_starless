@@ -8,11 +8,10 @@ prontera,161,190,4	script	Kafra Service	113,{
 	case 1:
 		mes "[Kafra Niana]";
 		mes "Your Respawn Point has";
-		mes "been saved here, inside";
-		mes "of the Kafra Corporation";
-		mes "Headquarters. Thank you.";
+		mes "been saved here,;
+		mes "Thank you.";
 		next;
-		savepoint "Prontera",160,182,1,1;
+		savepoint "Prontera",160,182;
 		mes "[Kafra Niana]";
 		mes "Please make use of";
 		mes "the Kafra Services that are";
