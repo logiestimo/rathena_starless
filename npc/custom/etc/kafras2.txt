@@ -1,4 +1,4 @@
-prontera,160,190,4	script	Kafra Service	640,{
+prontera,160,190,4	script	Kafra Niana	113,{
 	cutin "kafra_05",2;
 	mes "[Kafra Niana]";
 	mes "Hm...?";
