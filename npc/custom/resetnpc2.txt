@@ -68,9 +68,9 @@ prontera,150,190,4	script	Reset Girl	124,{
 		if (BaseLevel < 50)
 			.@cost = 2000;
 		else if (BaseLevel > 70)
-			.@cost += 8000;
+			.@cost += 80000;
 		else
-			.@cost = 75000;
+			.@cost = 30000;
 		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
@@ -94,7 +94,7 @@ prontera,150,190,4	script	Reset Girl	124,{
 	default:// others class
 		.@cost = 50000;
 		if (BaseLevel > 95)
-			.@cost += 10000;
+			.@cost += 100000;
 		mes "Reset Stats: " + .@cost + "z.";
 		mes "Reset Skills: " + .@cost + "z.";
 		mes "Please select the service you want:";
