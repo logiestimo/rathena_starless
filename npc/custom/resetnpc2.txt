@@ -34,9 +34,8 @@ prontera,150,190,4	script	Reset Girl	124,{
 	case JOB_MAGE_HIGH:
 	case JOB_ARCHER_HIGH:
 	case JOB_ACOLYTE_HIGH:
-	case JOB_MERCHAT_HIGH:
+	case JOB_MERCHANT_HIGH:
 	case JOB_THIEF_HIGH:
-
 
 	case JOB_BABY:// baby class
 	case JOB_BABY_SWORDMAN:
