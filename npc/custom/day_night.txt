@@ -1,10 +1,10 @@
 -    script    Day_Night    -1,{
-OnClock0600:
+OnClock0800:
   announce "Good Morning Ingaming Ragnarok Players",bc_blue|bc_all;
   day;
   end;
 
-OnClock1800:
+OnClock3600:
   announce "Good Evening Ingaming Ragnarok Players",bc_blue|bc_all;
   night;
   end;
