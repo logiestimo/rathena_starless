@@ -2,9 +2,7 @@ prontera,165,191,4	script	freebies	123,{
 OnPCLoginEvent:
 	mes "[Hello]";
 
-	mes "[I can give you a free gift based on your future job.]";
-
-	mes "[Please choose the correct item for the future job]";
+	mes "[I can Freebies if you already 1st Job.]";
 
 	next;
 	if(!#freeItems){
@@ -24,8 +22,6 @@ OnPCLoginEvent:
 	getitem 1002,1;
 	}	if(class == 6){  //Thief
 	getitem 1002,1;
-	}
-	#freeItems == true;
 	}
 	else{
 	mes "you already got free items :P";
