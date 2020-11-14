@@ -5,7 +5,7 @@ OnPCLoginEvent:
 	mes "[I can Freebies if you already 1st Job.]";
 
 	next;
-	if(#freeItems,1){
+	if(!#freeItems){
 	if(class == 1){  //Swordsman
 	mes "[you've Choice Swordsman, Here's your Freebies]";
 		next;	
@@ -39,6 +39,7 @@ OnPCLoginEvent:
 		next;
 	getitem 1002,1;
 	}
+	set #Freebies,1;
 	else{
 	mes "you already got free items :P";
 }
