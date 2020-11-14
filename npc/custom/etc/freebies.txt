@@ -7,8 +7,11 @@ prontera,165,191,4	script	freebies	123,{
 	else if (class == 0){
 	mes "You're still a Novice, Change into 1st Job to get the Freebies";
 	}
+		close;
+}
 	else{
 	mes "Come back if you already Change in to 1st Job";
 }
-	close;
+		close;
+}
 }
