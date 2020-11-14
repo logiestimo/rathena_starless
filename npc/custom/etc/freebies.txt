@@ -25,7 +25,6 @@ OnPCLoginEvent:
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-	}
 		if(class == 3){  //Archer
 	mes "[you've Choice Archer, Here's your Freebies]";	
 	getitem 1002,1;
@@ -35,7 +34,6 @@ OnPCLoginEvent:
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-}
 		if(class == 4){  //Acolyte
 	mes "[you've Choice Acolyte, Here's your Freebies]";	
 	getitem 1002,1;
@@ -45,7 +43,6 @@ OnPCLoginEvent:
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-}
 		if(class == 5){  //Merchant
 	mes "[you've Choice Merchant, Here's your Freebies]";	
 	getitem 1002,1;
@@ -55,7 +52,6 @@ OnPCLoginEvent:
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-}
 		if(class == 6){  //Thief
 	mes "[you've Choice Thief, Here's your Freebies]";	
 	getitem 1002,1;
@@ -65,5 +61,4 @@ OnPCLoginEvent:
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-}
 }
