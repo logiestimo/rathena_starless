@@ -1,17 +1,26 @@
-prontera,165,191,4	script	freebies	123,{
-	if(!#freeItems){
-	if(class == 1){  //Swordsman
-	mes "[you've Choice Swordsman, Here's your Freebies]";	
-	getitem 1002,1;
-			set #Freebies,1;
-	else if (class == 0){
-	mes "You're still a Novice, Change into 1st Job to get the Freebies";
-	}
-		close;
-}
-	else{
-	mes "Come back if you already Change in to 1st Job";
-}
-		close;
-}
+new_1-1,59,114,5	script	FreeGift NPC	864,{
+		if(!#sorry == 1) {
+				mes "Hey! you Already Get Reward From Me.";
+				mes "Sorry I Cant Give You Anymore Again More Than 1 Times.";
+				next;
+				mes "I dont Care You Crying Or Not. Tell You Mom Also Me not Scare~wu!!";
+				emotion e_bzz;
+				close;
+		}
+		mes "Welcome To IngamingRO "+strcharinfo(0)+" !!";
+		next;
+		mes "So You Is A New Player Here Right?";
+		next;
+		mes "Take My Reward Now And Have Fun With IngamingRO Server";
+		next;
+		getitem2 14545,10,1,0,0,0,0,0,0;
+		getitem2 12210,10,1,0,0,0,0,0,0;
+		getitem2 4142,2,1,0,0,0,0,0,0;
+		getitem2 4302,1,1,0,0,0,0,0,0;
+		getitem2 1208,1,1,10,0,0,0,0,0;
+		set Zeny, Zeny + 200;
+		announce "Ingaming Ragnarok Online : We Have New Player Join Our Server. His Name [ "+strcharinfo(0)+" ] !!",bc_all;
+		emotion e_thx;
+		set #sorry,1;
+		end;
 }
