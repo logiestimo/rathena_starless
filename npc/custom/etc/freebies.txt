@@ -9,11 +9,10 @@ OnPCLoginEvent:
 	if(class == 1){  //Swordsman
 	mes "[you've Choice Swordsman, Here's your Freebies]";	
 	getitem 1002,1;
-	}
 		set #Freebies,1;
+	}
 	else{
 	mes "Come back if you already Change in to 1st Job";
 }
 	close;
-}
 }
