@@ -1,0 +1,23 @@
+prontera,152,187,3  script  Freebies 444,{
+  if(!#freeItems){
+    if(class == 1){  //Swordsman
+      getitem 1002,1;
+    }
+    if(class == 2){  //Magician
+      getitem 1002,1;
+    }    if(class == 3){  //Archer 
+      getitem 1002,1;
+    }    if(class == 4){  //Acolyte
+      getitem 1002,1;
+    }
+    }    if(class == 5){  //Merchant 
+      getitem 1002,1;
+    }    if(class == 6){  //Thief
+      getitem 1002,1;
+    }
+    #freeItems == true;
+  }else{
+    mes "you already got free items :P";
+  }
+  close;
+}
