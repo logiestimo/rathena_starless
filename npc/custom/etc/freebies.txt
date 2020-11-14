@@ -5,22 +5,31 @@ OnPCLoginEvent:
 	mes "[I can Freebies if you already 1st Job.]";
 
 	next;
-	if(!#freeItems){
+	if(#freeItems,1){
 	if(class == 1){  //Swordsman
+	mes "[you've Choice Swordsman, Here's your Freebies]";	
 	getitem 1002,1;
 	}
+	else{
+	mes "Come back if you already Change in to 1st Job";
+}
 	if(class == 2){	//Magician
+	mes "[you've Choice Swordsman, Here's your Freebies]";
 	getitem 1002,1;
 	}
-	if(class == 3){	//Archer 
+	if(class == 3){	//Archer
+	mes "[you've Choice Swordsman, Here's your Freebies]";	 
 	getitem 1002,1;
 	}
 	if(class == 4){	//Acolyte
+	mes "[you've Choice Swordsman, Here's your Freebies]";
 	getitem 1002,1;
 	}
 	if(class == 5){//Merchant 
+	mes "[you've Choice Swordsman, Here's your Freebies]";
 	getitem 1002,1;
 	}	if(class == 6){  //Thief
+	mes "[you've Choice Swordsman, Here's your Freebies]";
 	getitem 1002,1;
 	}
 	else{
