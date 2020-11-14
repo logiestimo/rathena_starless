@@ -1,4 +1,4 @@
-prontera,147,1175,3  script  Freebies 444,{
+prontera,147,1175,3  script  Freebies 53,{
   if(!#freeItems){
     if(class == 1){  //Swordsman
       getitem 1002,1;
