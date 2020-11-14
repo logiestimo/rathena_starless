@@ -1,4 +1,4 @@
-prontera,163,175,4 script   NewbiePack    53,{
+prontera,163,175,4  scriptNewbiePack  53,{
 OnPCLoginEvent:
   if(!#freeItems){
     if(class == 1){  //Swordsman
