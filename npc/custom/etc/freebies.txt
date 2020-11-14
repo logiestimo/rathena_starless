@@ -1,9 +1,6 @@
 prontera,165,191,4	script	freebies	123,{
-OnPCLoginEvent:
 	mes "[Hello]";
-
 	mes "[I can Freebies if you already 1st Job.]";
-
 	next;
 	if(!#freeItems){
 	if(class == 1){  //Swordsman
