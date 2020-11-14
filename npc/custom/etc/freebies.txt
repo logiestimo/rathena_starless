@@ -4,7 +4,7 @@ prontera,165,191,4	script	freebies	123,{
 	mes "[you've Choice Swordsman, Here's your Freebies]";	
 	getitem 1002,1;
 			set #Freebies,1;
-	else if (class == 0)
+	else if (class == 0){
 	mes "You're still a Novice, Change into 1st Job to get the Freebies";
 	}
 	else{
