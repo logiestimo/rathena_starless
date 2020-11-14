@@ -1,7 +1,7 @@
-prontera,163,175,4  scriptNewbiePack  53,{
+prontera,146,193.4  Freebies    53,{
 OnPCLoginEvent:
-  if(!#freeItems){
-    if(class == 1){  //Swordsman
+if(!#freeItems){
+    if(class    ==  1){ //Swordsman
       getitem 1002,1;
     }
     if(class == 2){  //Magician
@@ -11,7 +11,7 @@ OnPCLoginEvent:
     }    if(class == 4){  //Acolyte
       getitem 1002,1;
     }
-    }    if(class == 5){  //Merchant 
+    }    if(class == 5){//Merchant 
       getitem 1002,1;
     }    if(class == 6){  //Thief
       getitem 1002,1;
@@ -19,6 +19,6 @@ OnPCLoginEvent:
     #freeItems == true;
   }else{
     mes "you already got free items :P";
-  }
+}
   close;
 }
