@@ -12,4 +12,3 @@ prontera,165,191,4	script	freebies	123,{
 }
 	close;
 }
-}
