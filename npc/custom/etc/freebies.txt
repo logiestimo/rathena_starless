@@ -1,124 +1,120 @@
-prontera,160,187,4    script    Freebies    123,{
+prontera,160,187,4	script	freebies	123,{
 
-    mes "[Hello]";
+	mes "[Hello]";
 
-    mes "[I can give you a free gift based on your future job.]";
+	mes "[I can give you a free gift based on your future job.]";
 
-    mes "[Please choose the correct item for the future job]";
+	mes "[Please choose the correct item for the future job]";
 
-    next;
+	next;
 
-    if(!#Freebie) {
+	if(!#Freebie) {
 
-        mes "Select one:";
+		mes "Select one:";
 
-        next;
+		next;
 
-        switch(select("Swordsman:Magician:Archer:Acolyte:Merchant:Thief")) {
+		switch(select("Swordsman:Magician:Archer:Acolyte:Merchant:Thief")) {
 
-            case 1:
+	case 1:
+	getitem 13758,1;
 
-                getitem 13758,1;
+	getitem 969,20;
 
-                getitem 969,20;
+	getitem 1108,1;
 
-                getitem 1108,1;
+				getitem 2104,1;
 
-                getitem 2104,1;
+				getitem 4043,4; //Item for Swordsman
 
-                getitem 4043,4; //Item for Swordsman
+				break;
+			case 2:
 
-                break;
+				getitem 13758,1;
 
- 
+				getitem 969,20;
 
-            case 2:
+				getitem 1108,1;
 
-                getitem 13758,1;
+				getitem 2104,1;
 
-                getitem 969,20;
+				getitem 4043,4; //Item for Magician
 
-                getitem 1108,1;
-
-                getitem 2104,1;
-
-                getitem 4043,4; //Item for Magician
-
-                break;
+				break;
 
  
 
-            case 3:
+			case 3:
 
-                getitem 13758,1;
+				getitem 13758,1;
 
-                getitem 969,20;
+				getitem 969,20;
 
-                getitem 1108,1;
+				getitem 1108,1;
 
-                getitem 2104,1;
+				getitem 2104,1;
 
-                getitem 4043,4; //Item for Archer
+				getitem 4043,4; //Item for Archer
 
-                break;
+				break;
 
-                
+				
 
-            case 4:
+			case 4:
 
-                getitem 13758,1;
+				getitem 13758,1;
 
-                getitem 969,20;
+				getitem 969,20;
 
-                getitem 1108,1;
+				getitem 1108,1;
 
-                getitem 2104,1;
+				getitem 2104,1;
 
-                getitem 4043,4; //Item for Acolyte
+				getitem 4043,4; //Item for Acolyte
 
-                break;
+				break;
 
-            
+			
 
-            case 5:
+			case 5:
 
-                getitem 13758,1;
+				getitem 13758,1;
 
-                getitem 969,20;
+				getitem 969,20;
 
-                getitem 1108,1;
+				getitem 1108,1;
 
-                getitem 2104,1;
+				getitem 2104,1;
 
-                getitem 4043,4; //Item for Merchant
+				getitem 4043,4; //Item for Merchant
 
-                break;
+				break;
 
-            
+			
 
-            case 6:
+			case 6:
 
-                getitem 13758,1;
+				getitem 13758,1;
 
-                getitem 969,20;
+				getitem 969,20;
 
-                getitem 1108,1;
+				getitem 1108,1;
 
-                getitem 2104,1;
+				getitem 2104,1;
 
-                getitem 4043,4; //Item for Thief
+				getitem 4043,4; //Item for Thief
 
-                break;
+				break;
 
-                
+				
 
-            }
+			}
 
-            set #Freebie, 1;
+			set #Freebie, 1;
 
-            close;
+			close;
 
-    }
+	}
 
    mes "[ Trololol ]";
 
@@ -128,10 +124,10 @@ prontera,160,187,4    script    Freebies    123,{
 
  
 
-    OnInit:
+	OnInit:
 
-    waitingroom "Get your freebies here ! ",0;
+	waitingroom "Get your freebies here ! ",0;
 
-    end;
+	end;
 
 }
