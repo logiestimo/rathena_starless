@@ -1,4 +1,4 @@
-new_1-1,59,114,5	script	FreeGift NPC	864,{
+new_2-1,59,114,5	script	FreeGift NPC	864,{
 		if(!#sorry) {
 		mes "Welcome To IngamingRO "+strcharinfo(0)+" !!";
 		next;
