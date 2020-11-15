@@ -1,12 +1,5 @@
 new_1-1,59,114,5	script	FreeGift NPC	864,{
 		if(!#sorry) {
-				mes "Hey! you Already Get Reward From Me.";
-				mes "Sorry I Cant Give You Anymore Again More Than 1 Times.";
-				next;
-				mes "I dont Care You Crying Or Not. Tell You Mom Also Me not Scare~wu!!";
-				emotion e_bzz;
-				close;
-		}
 		mes "Welcome To IngamingRO "+strcharinfo(0)+" !!";
 		next;
 		mes "So You Is A New Player Here Right?";
@@ -21,6 +14,15 @@ new_1-1,59,114,5	script	FreeGift NPC	864,{
 		set Zeny, Zeny + 200;
 		announce "Ingaming Ragnarok Online : We Have New Player Join Our Server. His Name [ "+strcharinfo(0)+" ] !!",bc_all;
 		emotion e_thx;
+		else{
+		mes "Hey! you Already Get Reward From Me.";
+				mes "Sorry I Cant Give You Anymore Again More Than 1 Times.";
+				next;
+				mes "I dont Care You Crying Or Not. Tell You Mom Also Me not Scare~wu!!";
+				emotion e_bzz;
+				close;
+		}
 		set #sorry,1;
 		end;
+}
 }
