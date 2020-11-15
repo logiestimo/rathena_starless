@@ -1,5 +1,5 @@
 new_1-1,59,114,5	script	FreeGift NPC	864,{
-		if(!#sorry == 1) {
+		if(!#sorry) {
 				mes "Hey! you Already Get Reward From Me.";
 				mes "Sorry I Cant Give You Anymore Again More Than 1 Times.";
 				next;
