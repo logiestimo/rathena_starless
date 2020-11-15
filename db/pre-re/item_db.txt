@@ -3784,7 +3784,7 @@
 7345,Armlet_Of_Prisoner,Handcuffs,3,724,,10,,,,,,,,,,,,,{},{},{}
 7346,Pile_Of_Ymir_Heart,Ymir's Heart Piece,3,20,,0,,,,,,,,,,,,,{},{},{}
 7347,Lab_Staff_Record,Research Chart,3,840,,10,,,,,,,,,,,,,{},{},{}
-7348,Indication_Of_Member01,Membership Card,3,20,,10,,,,,,,,,,,,,{},{},{}
+7348,Indication_Of_Member01,VIP Membership Card,1,0,50,,70,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time(60*24*7); },{},{}
 7349,Indication_Of_Member02,Archive Permit,3,20,,0,,,,,,,,,,,,,{},{},{}
 7350,Pass,Pass,3,20,,10,,,,,,,,,,,,,{},{},{}
 7351,Friend's_Diary,Friend's Diary,3,20,,0,,,,,,,,,,,,,{},{},{}
