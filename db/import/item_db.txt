@@ -65,3 +65,4 @@
 // Non-kRO Eden Group Mark effect
 //=============================================================
 //22508,Para_Team_Mark_,Eden Group Mark,11,0,,0,,,,0,0xFFFFFFFF,63,2,,,,,,{ unitskilluseid getcharid(3),"AL_TELEPORT",3; },{},{}
+7348,Indication_Of_Member01,VIP Membership Card,1,0,50,,70,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time(60*24*7); },{},{}
