@@ -26,7 +26,7 @@
 //	callfunc "qshop"{,<shop ID>{,<shop ID>{,...}}};
 //  ADD YOUR NPC HERE
 //============================================================
-prontera,164,203,6	script	Quest Shop#1	998,{ callfunc "qshop"; }
+prontera,130,194,6	script	Quest Shop#1	998,{ callfunc "qshop"; }
 // prontera,165,203,6	script	Quest Shop#2	998,{ callfunc "qshop",1,2; }	// call the shop 1 and 2 defined below
 // etc.. Add your Shop NPCs 'Quest Shop#XXX' here
 //============================================================
@@ -43,7 +43,7 @@ OnInit:
 //  Basic shop settings.
 // -----------------------------------------------------------
 
-	set .Announce,1;	// Announce quest completion? (1: yes / 0: no)
+	set .Announce,0;	// Announce quest completion? (1: yes / 0: no)
 	set .ShowSlot,1;	// Show item slots? (2: all equipment / 1: if slots > 0 / 0: never)
 	set .ShowID,0;  	// Show item IDs? (1: yes / 0: no)
 	set .ShowZeny,0;	// Show Zeny cost, if any? (1: yes / 0: no)
@@ -80,7 +80,7 @@ OnInit:
 // -----------------------------------------------------------
 
 // Shop 1
-	Add(1,5022,1,0,0,7086,1,969,10,999,40,1003,50,984,2);
+	Add(1,5420,1,350000,0,7097,1000,994,1200,2344,1,1965,800,7451,1);
 	Add(1,5032,1,0,0,1059,250,2221,1,2227,1,7063,600);
 	Add(1,5027,1,0,0,2252,1,1036,400,7001,50,4052,1);
 	Add(1,5045,1,0,0,2252,1,1054,450,943,1200);
