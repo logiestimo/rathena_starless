@@ -31,10 +31,7 @@ menu	"Last Warp ^777777["+lastwarp$+"]^000000",-,
     	" ~ Towns",Towns,
     	" ~ Fields",Fields,
     	" ~ Dungeons",Dungeons,
-    	" ~ Guild Castles",Castles,
-    	" ~ Guild Dungeons",Guild_Dungeons,
-    	" ~ Instances",Instances,
-    	" ~ Special Areas",Special;
+
 
 	if (lastwarp$ == "")
 		message strcharinfo(0),"You haven't warped anywhere yet.";
@@ -305,101 +302,7 @@ D40: Restrict("Pre-RE",1,2);
 	 Disp("Carpenter's Shop in the Tree:Passage to a Foreign World:Hvergermil's Fountain");
 	 Pick("","um_dun01","um_dun02","yggdrasil01");
 
-// --------------------------------------------------
-	Castles:
-// --------------------------------------------------
-menu	"Aldebaran Castles",C1, "Geffen Castles",C2, "Payon Castles",C3,
-    	"Prontera Castles",C4, "Arunafeltz Castles",C5, "Schwaltzvalt Castles",C6;
 
-C1: setarray @c[2],48,83,95,249,142,85,239,242,264,90;
-	Disp("Neuschwanstein:Hohenschwangau:Nuenberg:Wuerzburg:Rothenburg");
-	Pick("","alde_gld","alde_gld","alde_gld","alde_gld","alde_gld");
-C2: setarray @c[2],214,75,308,240,143,240,193,278,305,87;
-	Disp("Repherion:Eeyolbriggar:Yesnelph:Bergel:Mersetzdeitz");
-	Pick("","gef_fild13","gef_fild13","gef_fild13","gef_fild13","gef_fild13");
-C3: setarray @c[2],121,233,295,116,317,293,140,160,204,266;
-	Disp("Bright Arbor:Scarlet Palace:Holy Shadow:Sacred Altar:Bamboo Grove Hill");
-	Pick("","pay_gld","pay_gld","pay_gld","pay_gld","pay_gld");
-C4: setarray @c[2],134,65,240,128,153,137,111,240,208,240;
-	Disp("Kriemhild:Swanhild:Fadhgridh:Skoegul:Gondul");
-	Pick("","prt_gld","prt_gld","prt_gld","prt_gld","prt_gld");
-C5: setarray @c[2],158,272,83,47,68,155,299,345,292,107;
-	Disp("Mardol:Cyr:Horn:Gefn:Banadis");
-	Pick("","aru_gld","aru_gld","aru_gld","aru_gld","aru_gld");
-C6: setarray @c[2],293,100,288,252,97,196,137,90,71,315;
-	Disp("Himinn:Andlangr:Viblainn:Hljod:Skidbladnir");
-	Pick("","sch_gld","sch_gld","sch_gld","sch_gld","sch_gld");
-
-// --------------------------------------------------
-	Guild_Dungeons:
-// --------------------------------------------------
-menu	"Baldur",G1, "Luina",G2, "Valkyrie",G3, "Britoniah",G4,
-    	"Arunafeltz",G5, "Schwaltzvalt",G6;
-
-G1: Restrict("RE",2,3);
-	setarray @c[2],119,93,119,93,120,130;
-	Disp("Baldur F1:Baldur F2:Hall of Abyss");
-	Pick("","gld_dun01","gld_dun01_2","gld2_pay");
-G2: Restrict("RE",2,3);
-	setarray @c[2],39,161,39,161,147,155;
-	Disp("Luina F1:Luina F2:Hall of Abyss");
-	Pick("","gld_dun02","gld_dun02_2","gld2_ald");
-G3: Restrict("RE",2,3);
-	setarray @c[2],50,44,50,44,140,132;
-	Disp("Valkyrie F1:Valkyrie F2:Hall of Abyss");
-	Pick("","gld_dun03","gld_dun03_2","gld2_prt");
-G4: Restrict("RE",2,3);
-	setarray @c[2],116,45,116,45,152,118;
-	Disp("Britoniah F1:Britoniah F2:Hall of Abyss");
-	Pick("","gld_dun04","gld_dun04_2","gld2_gef");
-G5: Go("arug_dun01",199,195);
-G6: Go("schg_dun01",200,124);
-
-// --------------------------------------------------
-	Instances:
-// --------------------------------------------------
-menu	"Bakonawa Lake",I1, "Bangungot Hospital 2F",I2, "Buwaya Cave",I3,
-    	"Endless Tower",I4, "Hazy Forest",I5, "Malangdo Culvert",I6, "Nidhoggur's Nest",I7,
-    	"Octopus Cave",I8, "Old Glast Heim",I9, "Orc's Memory",I10, "Sealed Shrine",I11,
-    	"Wolfchev's Laboratory",I12;
-
-I1: Restrict("RE");
-	Go("ma_scene01",172,175);
-I2: Restrict("RE");
-	Go("ma_dun01",151,8);
-I3: Restrict("RE");
-	Go("ma_fild02",316,317);
-I4: Go("e_tower",72,112);
-I5: Restrict("RE");
-	Go("bif_fild01",161,334);
-I6: Restrict("RE");
-	Go("mal_in01",164,21);
-I7: Go("nyd_dun02",95,193);
-I8: Restrict("RE");
-	Go("mal_dun01",152,230);
-I9: Restrict("RE");
-	Go("glast_01",204,268);
-I10: Go("gef_fild10",240,198);
-I11: Go("monk_test",306,143);
-I12: Restrict("RE");
-	Go("lhz_dun04",148,269);
-
-// --------------------------------------------------
-	Special:
-// --------------------------------------------------
-menu	"Auction Hall",S1, "Battlegrounds",S2, "Casino",S3, "Eden Group Headquarters",S4,
-    	"Gonryun Arena",S5, "Izlude Arena",S6, "Monster Race Arena",S7, "Turbo Track",S8;
-
-S1: Go("auction_01",22,68);
-S2: Go("bat_room",154,150);
-S3: Go("cmd_in02",179,129);
-S4: Restrict("RE");
-	Go("moc_para01",31,14);
-S5: Go("gon_test",48,10);
-S6: Go("arena_room",100,88);
-S7: Go("p_track01",62,41);
-S8: Go("turbo_room",99,114);
-}
 
 // --------------------------------------------------
 //	Duplicates:
