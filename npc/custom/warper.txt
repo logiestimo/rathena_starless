@@ -125,7 +125,7 @@ menu	"Prontera",T1, "Alberta",T2, "Aldebaran",T3, "Amatsu",T4, "Ayothaya",T5,
     	"Izlude",T16, "Jawaii",T17, "Lighthalzen",T18, "Louyang",T19, "Lutie",T20,
     	"Malangdo",T21, "Malaya",T22, "Manuk",T23, "Midgarts Expedition Camp",T24,
     	"Mora",T25, "Morroc",T26, "Moscovia",T27, "Nameless Island",T28,
-    	"Niflheim",T29, "Payon",T30, "Rachel",T31, "Splendide",T32, "Thor Camp",T33,
+    	"Niflheim",T29, "Payon",T30, "Rachel",T31,
     	"Umbala",T34, "Veins",T35, "Yuno",T36;
 
 T1: Go("prontera",155,183);
@@ -166,8 +166,6 @@ T28: Go("nameless_n",256,215);
 T29: Go("niflheim",202,174);
 T30: Go("payon",179,100);
 T31: Go("rachel",130,110);
-T32: Go("splendide",201,147);
-T33: Go("thor_camp",246,68);
 T34: Go("umbala",97,153);
 T35: Go("veins",216,123);
 T36: Go("yuno",157,51);
@@ -501,8 +499,6 @@ payon,182,108,4	duplicate(Warper)	Warper#pay	640
 prontera,152,187,4	duplicate(Warper)	Warper#prt	640
 prt_fild05,279,223,6	duplicate(Warper)	Warper#cul	640
 rachel,135,116,4	duplicate(Warper)	Warper#rac	640
-splendide,205,153,4	duplicate(Warper)	Warper#spl	640
-thor_camp,249,76,4	duplicate(Warper)	Warper#thor	640
 umbala,106,150,3	duplicate(Warper)	Warper#umb	640
 veins,214,123,4	duplicate(Warper)	Warper#ve	640
 xmas,150,136,6	duplicate(Warper)	Warper#xmas	640
