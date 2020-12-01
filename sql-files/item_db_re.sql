@@ -13487,4 +13487,7 @@ REPLACE INTO `item_db_re` VALUES (32302,'Crimson_Rose','Crimson Rose',5,20,NULL,
 #===================================================================
 REPLACE INTO `item_db_re` VALUES (32350,'Farthezan','Farthezan',5,20,NULL,1100,'130:180',NULL,1,2,0x00004000,56,2,2,4,'170',1,2,'.@r = getrefine(); bonus2 bSkillAtk,"PA_PRESSURE",40; bonus bVariableCastrate,-.@r; if (.@r>=9) bonus2 bSkillAtk,"LG_RAYOFGENESIS",30; if (.@r>=11) { bonus2 bSkillAtk,"LG_RAYOFGENESIS",20; bonus2 bSkillAtk,"PA_PRESSURE",20; }',NULL,NULL);
 REPLACE INTO `item_db_re` VALUES (32351,'Estal','Estal',5,20,NULL,700,'195',NULL,1,2,0x00040000,56,2,2,4,'170',1,2,'.@r = getrefine(); bonus2 bSkillCooldown,"GN_SPORE_EXPLOSION",-1000; bonus bBaseAtk,4*.@r; if (.@r>=11) .@val = 50; else if (.@r>=9) .@val = 30; bonus2 bSkillAtk,"GN_SPORE_EXPLOSION",.@val;',NULL,NULL);
-
+#===================================================================
+# More VIP-VOUCHER
+#===================================================================
+REPLACE INTO `item_db2_re` VALUES ('33098', 'vip1', 'vip1', '0', null, null, '0', null, null, null, null, '4294967295', '63', '2', null, null, null, null, null, 'atcommand \"@vip +24h \"+strcharinfo(0)+\"\"; dispbottom \"+ 24h VIP !\";', null, null);
