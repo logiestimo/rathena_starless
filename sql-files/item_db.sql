@@ -6623,4 +6623,5 @@ REPLACE INTO `item_db` VALUES (19506,'T_Valkyrie_Feather_Band','T Valkyrie Feath
 REPLACE INTO `item_db` VALUES (19507,'Fine_Sun','Clear Sun',4,0,NULL,0,NULL,0,NULL,0,0xFFFFFFFF,7,2,1024,NULL,1,0,654,NULL,NULL,NULL);
 
 REPLACE INTO `item_db` VALUES (22777,'Gift_Buff_Set','Gift Buff Set',2,10,NULL,100,NULL,NULL,NULL,0,0xFFFFFFFF,63,2,NULL,NULL,1,NULL,NULL,NULL,NULL,NULL);
+REPLACE INTO `item_db` VALUES ('33098', 'vip1', 'vip1', '0', null, null, '0', null, null, null, null, '4294967295', '63', '2', null, null, null, null, null, 'atcommand \"@vip +24h \"+strcharinfo(0)+\"\"; dispbottom \"+ 24h VIP !\";', null, null);
 
