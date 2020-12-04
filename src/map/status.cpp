@@ -1550,7 +1550,6 @@ void initChangeTables(void)
 	// Soul Reaper
 	StatusIconChangeTable[SC_USE_SKILL_SP_SPA] = EFST_USE_SKILL_SP_SPA;
 	StatusIconChangeTable[SC_USE_SKILL_SP_SHA] = EFST_USE_SKILL_SP_SHA;
-	StatusIconChangeTable[@vip] = SI_VIP;
 #ifdef RENEWAL
 	// renewal EDP increases your weapon atk
 	StatusChangeFlagTable[SC_EDP] |= SCB_WATK;
