@@ -6591,4 +6591,4 @@
 19507,Fine_Sun,Clear Sun,4,0,,0,,0,,0,0xFFFFFFFF,7,2,1024,,1,0,654,{},{},{}
 
 22777,Gift_Buff_Set,Gift Buff Set,2,10,,100,,,,0,0xFFFFFFFF,63,2,,,1,,,{},{},{}
-33098,vip,vip,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{atcommand "@vip +24h "+strcharinfo(0)+"";},{},{}
+33098,vip,vip,2,1000,,200,,,,,0xFFFFFFFF,7,2,,,,,,{*vip_status(4j,{"+strcharinfo(0)+"";})},{},{}
